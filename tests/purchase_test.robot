@@ -15,12 +15,14 @@ Test Teardown    Quit Browser
 
 *** Test Cases ***
 Add Product To Cart
+    [Tags]    POEI20252-772
     Connect
     Click Add To Cart Button
     Click Cart Button
     Page Should Contain    ${CART_ITEM_TEXT}
 
 Purchase Product
+    [Tags]    POEI20252-773
     Connect
     Click Add To Cart Button
     Click Cart Button
