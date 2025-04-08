@@ -82,7 +82,7 @@ pipeline{
             ]
           },
           {
-            "title": "Test Report"
+            "title": "Test Report",
             "url": "attachment://report.html"
           }]
           }
