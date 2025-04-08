@@ -37,5 +37,19 @@ pipeline{
         }
       }
     }
+    stage('Results'){
+      steps{
+        robot(outputPath: ".",
+          passThreshold: 90.0,
+          unstableThreshold: 70.0,
+          disableArchiveOutput: true,
+          outputFileName: "output.xml",
+          logFileName: 'log.html',
+          reportFileName: 'report.html',
+          countSkippedTests: true,
+          otherFiles: 'selenium-screenshot-*.png'
+        )
+      }
+    }
   }
 }
