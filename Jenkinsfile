@@ -39,16 +39,6 @@ pipeline{
     }
     stage('Webhook'){
       steps{
-        script{
-          bat """
-            curl ^
-            -H "Content-Type: application/json" ^
-            -d "{\"username\": \"Robot Test Report\", \"content\": \"Test completed\"}" ^
-            https://discordapp.com/api/webhooks/1359154405147934992/2RwoZD57gNSStkB8yxAUT4O7jAe7OOAECZTCuMj9tDW6RBHYUaCjgon1E05MoTjsaQlg
-          """
-        }
-      }
-      steps{
         script {
           def testResults = readFile('output.xml')
           def totalTests = testResults.count('<test id=')
@@ -64,6 +54,7 @@ pipeline{
 
           def discordPayload = """
           {
+          "username": "Louise",
           "embeds": [{
             "title": "Test Results",
             "color": 3066993,
