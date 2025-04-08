@@ -1,0 +1,1 @@
+confirmationText = "Thank you for your order!"
