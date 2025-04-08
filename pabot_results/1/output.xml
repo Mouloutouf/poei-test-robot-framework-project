@@ -1,137 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Rebot 7.2.2 (Python 3.13.2 on win32)" generated="2025-04-08T14:31:36.489039" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-04-08T14:31:27.173083" rpa="false" schemaversion="5">
 <suite id="s1" name="Tests" source="C:\Users\IB\Desktop\dev\automatisation\robot pom project\tests">
-<suite id="s1-s1" name="Connexion Test" source="C:\Users\IB\Desktop\dev\automatisation\robot pom project\tests\connexion_test.robot">
-<test id="s1-s1-t1" name="Connection Success" line="13">
-<kw name="Setup Browser" owner="hooks" type="SETUP">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-04-08T14:31:27.384854" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
-<arg>${url}</arg>
-<arg>${browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-04-08T14:31:27.384633" elapsed="2.159373"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-04-08T14:31:29.544230" elapsed="0.031323"/>
-</kw>
-<arg>https://www.saucedemo.com</arg>
-<arg>chrome</arg>
-<status status="PASS" start="2025-04-08T14:31:27.384073" elapsed="2.191755"/>
-</kw>
-<kw name="Input Text Username Field" owner="login_page">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-08T14:31:29.577239" level="INFO">Typing text 'standard_user' into text field 'name=user-name'.</msg>
-<arg>${USERNAME_FIELD}</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-08T14:31:29.576716" elapsed="0.076620"/>
-</kw>
-<arg>standard_user</arg>
-<status status="PASS" start="2025-04-08T14:31:29.576152" elapsed="0.077309"/>
-</kw>
-<kw name="Input Text Password Field" owner="login_page">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-08T14:31:29.654256" level="INFO">Typing text 'secret_sauce' into text field 'name=password'.</msg>
-<arg>${PASSWORD_FIELD}</arg>
-<arg>${password}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-08T14:31:29.653972" elapsed="0.050840"/>
-</kw>
-<arg>secret_sauce</arg>
-<status status="PASS" start="2025-04-08T14:31:29.653624" elapsed="0.051305"/>
-</kw>
-<kw name="Click Login Button" owner="login_page">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-04-08T14:31:29.705721" level="INFO">Clicking button 'name=login-button'.</msg>
-<arg>${LOGIN_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-08T14:31:29.705428" elapsed="0.078160"/>
-</kw>
-<status status="PASS" start="2025-04-08T14:31:29.705091" elapsed="0.078681"/>
-</kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-04-08T14:31:29.795185" level="INFO">Current page contains text 'Products'.</msg>
-<arg>${PRODUCTS_TEXT}</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-04-08T14:31:29.783916" elapsed="0.011437"/>
-</kw>
-<kw name="Quit Browser" owner="hooks" type="TEARDOWN">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-04-08T14:31:29.796351" elapsed="2.090081"/>
-</kw>
-<status status="PASS" start="2025-04-08T14:31:29.795804" elapsed="2.090974"/>
-</kw>
-<status status="PASS" start="2025-04-08T14:31:27.383580" elapsed="4.503356"/>
-</test>
-<test id="s1-s1-t2" name="Connection Failure" line="19">
-<kw name="Setup Browser" owner="hooks" type="SETUP">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-04-08T14:31:31.892713" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
-<arg>${url}</arg>
-<arg>${browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-04-08T14:31:31.892118" elapsed="1.406955"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-04-08T14:31:33.299351" elapsed="0.025211"/>
-</kw>
-<arg>https://www.saucedemo.com</arg>
-<arg>chrome</arg>
-<status status="PASS" start="2025-04-08T14:31:31.891271" elapsed="1.433398"/>
-</kw>
-<kw name="Input Text Username Field" owner="login_page">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-08T14:31:33.325428" level="INFO">Typing text 'standard_user' into text field 'name=user-name'.</msg>
-<arg>${USERNAME_FIELD}</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-08T14:31:33.325198" elapsed="0.076840"/>
-</kw>
-<arg>standard_user</arg>
-<status status="PASS" start="2025-04-08T14:31:33.324847" elapsed="0.077392"/>
-</kw>
-<kw name="Input Text Password Field" owner="login_page">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-08T14:31:33.403353" level="INFO">Typing text 'not_a_password' into text field 'name=password'.</msg>
-<arg>${PASSWORD_FIELD}</arg>
-<arg>${password}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-08T14:31:33.403011" elapsed="0.053145"/>
-</kw>
-<arg>not_a_password</arg>
-<status status="PASS" start="2025-04-08T14:31:33.402497" elapsed="0.053770"/>
-</kw>
-<kw name="Click Login Button" owner="login_page">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-04-08T14:31:33.456936" level="INFO">Clicking button 'name=login-button'.</msg>
-<arg>${LOGIN_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-08T14:31:33.456726" elapsed="0.053597"/>
-</kw>
-<status status="PASS" start="2025-04-08T14:31:33.456424" elapsed="0.054020"/>
-</kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-04-08T14:31:33.521614" level="INFO">Current page contains text 'Epic sadface'.</msg>
-<arg>${ERROR_TEXT}</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-04-08T14:31:33.510573" elapsed="0.011136"/>
-</kw>
-<kw name="Quit Browser" owner="hooks" type="TEARDOWN">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-04-08T14:31:33.522281" elapsed="2.102035"/>
-</kw>
-<status status="PASS" start="2025-04-08T14:31:33.521957" elapsed="2.102677"/>
-</kw>
-<status status="PASS" start="2025-04-08T14:31:31.887519" elapsed="3.737265"/>
-</test>
-<status status="PASS" start="2025-04-08T14:31:27.196000" elapsed="8.240000"/>
-</suite>
-<suite id="s1-s2" name="Purchase Test" source="C:\Users\IB\Desktop\dev\automatisation\robot pom project\tests\purchase_test.robot">
-<test id="s1-s2-t1" name="Add Product To Cart" line="17">
+<suite id="s1-s1" name="Purchase Test" source="C:\Users\IB\Desktop\dev\automatisation\robot pom project\tests\purchase_test.robot">
+<test id="s1-s1-t1" name="Add Product To Cart" line="17">
 <kw name="Setup Browser" owner="hooks" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
 <msg time="2025-04-08T14:31:27.388852" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
@@ -215,7 +86,7 @@
 </kw>
 <status status="PASS" start="2025-04-08T14:31:27.387368" elapsed="4.762087"/>
 </test>
-<test id="s1-s2-t2" name="Purchase Product" line="23">
+<test id="s1-s1-t2" name="Purchase Product" line="23">
 <kw name="Setup Browser" owner="hooks" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
 <msg time="2025-04-08T14:31:32.153495" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
@@ -361,19 +232,17 @@
 </test>
 <status status="PASS" start="2025-04-08T14:31:27.196473" elapsed="9.001199"/>
 </suite>
-<doc>[https://pabot.org/?ref=log|Pabot] result from 2 executions.</doc>
-<status status="PASS" start="2025-04-08T14:31:27.187000" elapsed="9.011000"/>
+<status status="PASS" start="2025-04-08T14:31:27.187150" elapsed="9.010906"/>
 </suite>
 <statistics>
 <total>
-<stat pass="4" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Tests" id="s1" pass="4" fail="0" skip="0">Tests</stat>
-<stat name="Connexion Test" id="s1-s1" pass="2" fail="0" skip="0">Tests.Connexion Test</stat>
-<stat name="Purchase Test" id="s1-s2" pass="2" fail="0" skip="0">Tests.Purchase Test</stat>
+<stat name="Tests" id="s1" pass="2" fail="0" skip="0">Tests</stat>
+<stat name="Purchase Test" id="s1-s1" pass="2" fail="0" skip="0">Tests.Purchase Test</stat>
 </suite>
 </statistics>
 <errors>
